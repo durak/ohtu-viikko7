@@ -4,18 +4,22 @@ import java.util.Scanner;
 
 public class KPSPelaajaVsPelaaja extends KPSPeli {
 
-    private static final Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
+    
+    public KPSPelaajaVsPelaaja(Scanner scanner) {
+        this.scanner = scanner;
+    }
 
     @Override
     String ekanSiirto() {
-        System.out.print("Ensimmäisen pelaajan siirto: ");
+        System.out.println("Ensimmäisen pelaajan siirto: ");
         String siirto = scanner.nextLine();
         return siirto;
     }
 
     @Override
     String tokanSiirto() {
-        System.out.print("Toisen pelaajan siirto: ");
+        System.out.println("Toisen pelaajan siirto: ");
         String siirto = scanner.nextLine();
         return siirto;
     }
